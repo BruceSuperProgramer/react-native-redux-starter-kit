@@ -21,6 +21,12 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
+src/config.js
+ios/assets/src/*
+ios/assets/node_modules/*
+ios/fastlane/*.app.dSYM.zip
+ios/vendor
+ios/main.jsbundle
 
 # Android/IntelliJ
 #
@@ -29,6 +35,18 @@ build/
 .gradle
 local.properties
 *.iml
+android/vendor
+android/app/src/main/assets/index.android.bundle
+/android/app/src/main/res/drawable-mdpi/*
+/android/app/src/main/res/drawable-hdpi/*
+/android/app/src/main/res/drawable-xhdpi/*
+/android/app/src/main/res/drawable-xxhdpi/*
+/android/app/src/main/res/drawable-xxxhdpi/*
+/android/drawable-mdpi/*
+/android/drawable-hdpi/*
+/android/drawable-xhdpi/*
+/android/drawable-xxhdpi/*
+/android/drawable-xxxhdpi/*
 
 # node.js
 #
@@ -36,10 +54,16 @@ node_modules/
 npm-debug.log
 yarn-error.log
 
+# Jest
+coverage
+
 # BUCK
 buck-out/
 \.buckd/
 *.keystore
+
+# jest
+coverage/*
 
 # fastlane
 #
@@ -52,5 +76,7 @@ buck-out/
 */fastlane/Preview.html
 */fastlane/screenshots
 
-# Bundle artifact
-*.jsbundle
+# ENV Variable management
+.env.production
+.env.sandbox
+.env
