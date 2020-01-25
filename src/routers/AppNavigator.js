@@ -1,12 +1,12 @@
 import { createStackNavigator } from 'react-navigation-stack';
-import Drawer from './DrawerNavigator';
+import Home from '../screens/Home';
 
 export default createStackNavigator(
 	{
-		Drawer: { screen: Drawer }
+		Home: { screen: Home }
 	},
 	{
-		initialRouteName: 'Drawer',
+		initialRouteName: 'Home',
 		headerMode: 'none'
 	}
 );
