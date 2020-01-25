@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import HomeScreen from './HomeScreen';
 
-class HomeContainer extends React.Component {
+class HomeContainer extends Component {
 	render() {
 		return <HomeScreen navigation={this.props.navigation} />;
 	}

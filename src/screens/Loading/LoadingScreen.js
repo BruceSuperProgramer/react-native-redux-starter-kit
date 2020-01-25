@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from 'native-base';
 import { userLoginSuccess } from '../../actions/auth';
 import { connect } from 'react-redux';
 
-class LoadingScreen extends React.Component {
+class LoadingScreen extends Component {
 	login = () => {
 		this.props.userLoginSuccess();
-		this.props.navigation.navigate('Home');
+		this.props.navigation.navigate('App');
 	};
 
 	render() {

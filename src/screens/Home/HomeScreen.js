@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { Button } from 'native-base';
 import { userRequestLogout } from '../../actions/auth';
 import { connect } from 'react-redux';
 
-class HomeScreen extends React.Component {
+class HomeScreen extends Component {
 	logout = () => {
 		this.props.userRequestLogout();
 		this.props.navigation.navigate('Loading');

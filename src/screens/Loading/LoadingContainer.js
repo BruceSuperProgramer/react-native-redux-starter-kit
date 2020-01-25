@@ -1,27 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import LoadingScreen from './LoadingScreen';
 
-class LoadingContainer extends React.Component {
+class LoadingContainer extends Component {
 	state = {
 		updated: false
 	};
 
-	shouldComponentUpdate(nextProps, nextState) {
-		console.log('shouldComponentUpdate');
-	}
-
-	componentDidUpdate(prevProps, prevState) {
-		console.log('componentDidUpdate');
-	}
-
-	navigateToApp = () => {
-		this.setState({ updated: true });
-		this.props.navigation.navigate('App');
-	};
-
 	componentDidMount() {
-		this.props.isAuthenticated ? navigateToApp : null;
+		this.props.isAuthenticated ? this.props.navigation.navigate('App') : null;
 	}
 
 	render() {
