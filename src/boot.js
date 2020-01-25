@@ -17,16 +17,13 @@ export default class Root extends Component {
 	}
 	render() {
 		return (
-			<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-				<Text>Hello World</Text>
-			</View>
-			// <StyleProvider style={getTheme(material)}>
-			// 	<Provider store={this.store}>
-			// 		<PersistGate persistor={this.persistor}>
-			// 			<App />
-			// 		</PersistGate>
-			// 	</Provider>
-			// </StyleProvider>
+			<StyleProvider style={getTheme(material)}>
+				<Provider store={this.store}>
+					<PersistGate persistor={this.persistor}>
+						<App />
+					</PersistGate>
+				</Provider>
+			</StyleProvider>
 		);
 	}
 }

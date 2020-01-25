@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 class LoadingContainer extends Component {
 	componentDidMount() {
-		this.props.navigation.navigate(this.props.auth.token ? 'App' : 'Login');
+		this.props.navigation.navigate(this.props.auth.token ? 'Login' : 'Login');
 	}
 	render() {
 		return <Loading navigation={this.props.navigation} />;
